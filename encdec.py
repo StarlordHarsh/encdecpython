@@ -45,7 +45,7 @@ def bashenc():
      S+=t[k]
     else:
      S+=' '
-   delay_print(color.OKGREEN+"Encrypted messsage is:"+color)
+   delay_print(color.OKGREEN+"Encrypted messsage is:"+color.END)
    time.sleep(4)
    print(S)
   if j==2:
