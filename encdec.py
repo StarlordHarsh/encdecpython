@@ -318,11 +318,11 @@ if choice==0:
 bar()
 while choice!=0:
  print("""
-                  1.Atbash Encryption(only for small alphabets)
+                  1.Atbash Encryption
                   2.Rot13
                   3.Rot22
                   4.Simple Encryption(add 1)
-                  5.caesar(with ur key) 
+                  5.caesar(with ur key) where ! denotes a single space 
                   6.Exit The program 
                                               """)
  c=0
@@ -370,7 +370,7 @@ while choice!=0:
      rotenc()
     if f==2:
      rotdec()
-    hc=int(input("\nTo do some more task in ROT13 enter 3 otherwise 0:"))
+    hc=int(input("\nTo do some more task in ROT13 enter 4 otherwise 0:"))
     print("\n")
     '''if hc!=0:
      pr()'''
@@ -403,7 +403,7 @@ while choice!=0:
 
 
  elif c==4:
-  def f():
+  def t():
     print("""            1.encrypt the text
                2.Decrypt the text
                3.Exit from this method
@@ -412,7 +412,7 @@ while choice!=0:
   
   g=None
   while g!=0:
-   f()
+   t()
    f=int(input("Enter ur choice what to do now:"))
    if f==1:
     simenc()
@@ -444,5 +444,6 @@ while choice!=0:
     i=int(input("\nTo do more task in caesor keyed enter 6 otherwise 0:"))
     '''if g!=0:
       f() '''  
-    if g==3:
+    if i==3:
      sys.exit(0)
+
