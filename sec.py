@@ -32,7 +32,12 @@ print("""
 
 
 def bashenc():
-    delay_print("Atbash encryption method ready to launch!")
+    s = input("Enter the message to Encrypt:")
+    s1 = ""
+    for k in s:
+        s1 += (chr(90 - (ord(k) - 65))) if k.isupper() else chr(122 - (ord(k) - 97))
+    print(s1)
+    '''delay_print("Atbash encryption method ready to launch!")
     s = ""
     S = ''
     print("\n")
@@ -67,14 +72,16 @@ def bashenc():
                 S += ' '
         delay_print(color.OKGREEN + "Encrypted messsage is:" + color.END)
         time.sleep(4)
-        print(S)
+        print(S)'''
 
 
 def bashdec():
-    s = ''
+    s = input("Enter the message to Decrypt:")
+    s1 = ""
     for k in s:
-        if(k.isupper()):
-            
+        s1 += (chr(90 - (ord(k) - 65))) if k.isupper() else chr(122 - (ord(k) - 97))
+    print(s1)
+
 
     ''' int(input("Enter 1 to decrypt the Capital letters encrypted words:"))
     if j == 1:
@@ -107,7 +114,7 @@ def bashdec():
                 S += ' '
         delay_print(color.OKGREEN + "Decrypted messsage is:" + color.END)
         time.sleep(4)'''
-    print(S)
+
 
 
 def rotenc():
