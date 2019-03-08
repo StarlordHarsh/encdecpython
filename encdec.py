@@ -16,15 +16,6 @@ import sys
 import time
 from tqdm import tqdm
 
-print(color.OKBLUE+"Author:humanoid_hater"+color.END)
-print("""
-                   *   *
-                     .
-                     _
-
-
-
-                                            """)
 
 def bashenc():
   delay_print("Atbash encryption method ready to launch!")
@@ -75,7 +66,8 @@ def bashdec():
         'U' : 'F', 'T' : 'G', 'S' : 'H', 'R' : 'I', 'Q' : 'J', 
         'P' : 'K', 'O' : 'L', 'N' : 'M', 'M' : 'N', 'L' : 'O', 
         'K' : 'P', 'J' : 'Q', 'I' : 'R', 'H' : 'S', 'G' : 'T', 
-        'F' : 'U', 'E' : 'V', 'D' : 'W', 'X' : 'C', 'B' : 'Y', 'A' : 'Z','@':'@',' ':' ','.':'.'} 
+        'F' : 'U', 'E' : 'V', 'D' : 'W', 'X' : 'C', 'B' : 'Y',
+        'A' : 'Z','@':'@',' ':' ','.':'.'}
    for k in s:
     if k!=' ':
      S+=t[k]
@@ -91,7 +83,8 @@ def bashdec():
         'u' : 'f', 't' : 'g', 's' : 'h', 'r' : 'i', 'q' : 'j', 
         'p' : 'k', 'o' : 'l', 'n' : 'm', 'm' : 'n', 'l' : 'o', 
         'k' : 'p', 'j' : 'q', 'i' : 'r', 'h' : 's', 'g' : 't', 
-        'f' : 'u', 'e' : 'v', 'd' : 'w', 'x' : 'c', 'b' : 'y', 'a' : 'z','@':'@',' ':' ','.':'.'} 
+        'f' : 'u', 'e' : 'v', 'd' : 'w', 'x' : 'c', 'b' : 'y',
+        'a' : 'z','@':'@',' ':' ','.':'.'}
    for k in s:
     if k!=' ':
      S+=t[k]
@@ -259,7 +252,7 @@ def cenc():
     j=i
     print(chr(j),end="")
     li=li-1
-   elif n>'a' and n<=k:
+   elif 'a' < n <= k:
     j=j-1
     print(chr(j),end="")
     li=li-1
@@ -292,42 +285,37 @@ def cdec():
    print('a',end="")
   elif j==' ':
    print(' ',end="")
- 
-
 
 def delay_print(s):
  for c in s:
   print(c,end="")
   sys.stdout.flush()
   time.sleep(0.1)
- 
+
 def bar():
  progress = progressbar.ProgressBar()
  for i in progress(range(25)):
     time.sleep(0.1)
 
-choice=None
-delay_print("This Script Can Encrypt Ur Message In a Different Manner So That No Third Person Can Read It!")
+print("This Script Can Encrypt Ur Message In a Different Manner So That No Third Person Can Read It!")
 print("\n\n\n")
-choice=int(input(color.OKBLUE+"\nEnter 1 to start encryption and decryption process and 0 to exit the program:"+color.END))
-if choice==0:
+#choice=int(input(color.OKBLUE+"\nEnter 1 to start encryption and decryption process and 0 to exit the program:"+color.END))
+'''if choice==0:
   delay_print(color.WARNING+"Thanks for using me!"+color.END)
   delay_print(color.FAIL+"Leave a Reply on cyberbot1502@gmail.com"+color.END)
-  sys.exit(0)
-
+  sys.exit(0)'''
 bar()
-while choice!=0:
+
+while True:
  print("""
-                  1.Atbash Encryption
-                  2.Rot13
-                  3.Rot22
-                  4.Simple Encryption(add 1)
-                  5.caesar(with ur key) where ! denotes a single space 
-                  6.Exit The program 
+              1. Atbash Encryption
+              2. Rot13
+              3. Rot22
+              4. Simple Encryption(add 1)
+              5. caesar(with ur key) where ! denotes a single space 
+              6. Exit The program 
                                               """)
- c=0
- ch=None
- c=int(input("Please Choose ur encryption Method from the following techniques listed above:"))
+ c=int(input("Your Choice-"))
  if c==6:
   delay_print(color.WARNING+"Thanks for using me!"+color.END)
   delay_print(color.FAIL+"Leave a Reply on cyberbot1502@gmail.com"+color.END)
@@ -335,33 +323,33 @@ while choice!=0:
 
  if c==1:
   def prnt():
-   print("""             1.encrypt the text
-              2.Decrypt the text
-              3.Exit from this method
-
-                                    """)
-  
-  while ch!=0: 
+   print("""            
+              1. Encrypt the text
+              2. Decrypt the text
+              3. Exit from this method
+                                                  """)
+  ch=None
+  while ch!=0:
    prnt()
    f=int(input("Enter ur choice what to do now:"))
    if f==1:
     bashenc()
    if f==2:
     bashdec()
-   ch=int(input("\nWant to do some more encryption-decryption task on Atbash then enter 2:")) 
+   ch=int(input("\nWant to do some more encryption-decryption task on Atbash then enter 2:"))
    '''if ch!=0:
     prnt()'''
    if ch==3:
     sys.exit(0)
- 
+
  elif c==2:
    def pr():
-      print("""            1.encrypt the text
-              2.Decrypt the text
-              3.Exit from this method
- 
-                                              """)
-   
+      print("""            
+              1. Encrypt the text
+              2. Decrypt the text
+              3. Exit from this method
+                                               """)
+
    hc=None
    while hc!=0:
     pr()
@@ -379,13 +367,12 @@ while choice!=0:
 
  elif c==3:
   def p():
-    print("""            1.encrypt the text
-               2.Decrypt the text
-               3.Exit from this method
+    print("""            
+              1. Encrypt the text
+              2. Decrypt the text
+              3. Exit from this method
 
                                     """)
-
-  
   cc=None
   while cc!=0:
    p()
@@ -404,12 +391,13 @@ while choice!=0:
 
  elif c==4:
   def t():
-    print("""            1.encrypt the text
-               2.Decrypt the text
-               3.Exit from this method
+   print("""            
+                  1. Encrypt the text
+                  2. Decrypt the text
+                  3. Exit from this method
 
-                                    """)
-  
+                                        """)
+
   g=None
   while g!=0:
    t()
@@ -427,12 +415,13 @@ while choice!=0:
 
  elif c==5:
   def f():
-    print("""            1.encrypt the text
-               2.Decrypt the text
-               3.Exit from this method  
+   print("""            
+                  1. Encrypt the text
+                  2. Decrypt the text
+                  3. Exit from this method
 
-                                    """)
-  
+                                        """)
+
   i=None
   while i!=0:
     f()
@@ -443,7 +432,7 @@ while choice!=0:
      cdec()
     i=int(input("\nTo do more task in caesor keyed enter 6 otherwise 0:"))
     '''if g!=0:
-      f() '''  
+      f() '''
     if i==3:
      sys.exit(0)
 
