@@ -94,32 +94,32 @@ def rot22enc():
     while li != 0:
         for i in s:
             j = ord(i)
-            if j >= 97 and j <= 100:
+            if 97 <= j <= 100:
                 j = j + 22
                 # print(color.FAIL+"Encrypted string is:"+color.END,end="")
                 print(chr(j), end="")
                 li = li - 1
-            elif j >= 101 and j <= 104:
+            elif 101 <= j <= 104:
                 j = j - 4
                 print(chr(j), end="")
                 li = li - 1
-            elif j >= 105 and j <= 108:
+            elif 105 <= j <= 108:
                 j = j - 4
                 print(chr(j), end="")
                 li = li - 1
-            elif j >= 109 and j <= 112:
+            elif 109 <= j <= 112:
                 j = j - 4
                 print(chr(j), end="")
                 li = li - 1
-            elif j >= 113 and j <= 116:
+            elif 113 <= j <= 116:
                 j = j - 4
                 print(chr(j), end="")
                 li = li - 1
-            elif j >= 117 and j <= 120:
+            elif 117 <= j <= 120:
                 j = j - 4
                 print(chr(j), end="")
                 li = li - 1
-            elif j >= 121 and j <= 122:
+            elif 121 <= j <= 122:
                 j = j - 4
                 print(chr(j), end="")
                 li = li - 1
@@ -138,11 +138,11 @@ def rot22dec():
     while li != 0:
         for i in s:
             j = ord(i)
-            if j >= 119 and j <= 122:
+            if 119 <= j <= 122:
                 j = j - 22
                 print(chr(j), end="")
                 li = li - 1
-            elif j >= 97 and j <= 118:
+            elif 97 <= j <= 118:
                 j = j + 4
                 print(chr(j), end="")
                 li = li - 1
@@ -239,7 +239,7 @@ def delay_print(s):
 
 def bar():
     progress = progressbar.ProgressBar()
-    for i in progress(range(25)):
+    for __ in progress(range(25)):
         time.sleep(0.1)
 
 
@@ -301,17 +301,13 @@ while True:
         hc = None
         while hc != 0:
             pr()
-            f = int(input("Enter ur choice what to do now:"))
+            f = int(input("Enter your choice-"))
             if f == 1:
-                rotenc()
-            if f == 2:
-                rotdec()
-            hc = int(input("\nTo do some more task in ROT13 enter 4 otherwise 0:"))
-            print("\n")
-            '''if hc!=0:
-  pr()'''
-            if hc == 3:
-                sys.exit(0)
+             rotenc()
+            elif f == 2:
+             rotdec()
+            elif f == 3:
+             break
 
     elif c == 3:
         def p():
@@ -326,17 +322,13 @@ while True:
         cc = None
         while cc != 0:
             p()
-            f = int(input("Enter ur choice what to do now:"))
+            f = int(input("Enter your choice-"))
             if f == 1:
-                rot22enc()
-            if f == 2:
-                rot22dec()
-            cc = int(input("\nTo do more task in ROT22 enter 4 otherwise 0:"))
-            print("\n")
-            '''if cc!=0:
-    p()'''
-            if cc == 3:
-                sys.exit(0)
+             rot22enc()
+            elif f == 2:
+             rot22dec()
+            elif f == 3:
+             break
 
     elif c == 4:
         def t():
@@ -350,19 +342,16 @@ while True:
         g = None
         while g != 0:
             t()
-            f = int(input("Enter ur choice what to do now:"))
+            f = int(input("Enter your choice-"))
             if f == 1:
-                simenc()
-            if f == 2:
-                simdec()
-            g = int(input("\nTo do more task in Simple method enter 5 otherwise 0:"))
-            '''if g!=0:
-            f()'''
-            if g == 3:
-                sys.exit(0)
+             simenc()
+            elif f == 2:
+             simdec()
+            elif f == 3:
+             break
 
     elif c == 5:
-        def f():
+        def f1():
             print("""            
                   1. Encrypt the text
                   2. Decrypt the text
@@ -371,15 +360,12 @@ while True:
 
         i = None
         while i != 0:
-            f()
-            g = int(input("Enter ur choice what to do now:"))
-            if g == 1:
-                cenc()
-            if g == 2:
-                cdec()
-            i = int(input("\nTo do more task in caesor keyed enter 6 otherwise 0:"))
-            '''if g!=0:
-     f() '''
-            if i == 3:
-                sys.exit(0)
+            f1()
+            f = int(input("Enter your choice-"))
+            if f == 1:
+             cenc()
+            elif f == 2:
+             cdec()
+            elif f == 3:
+             break
 
