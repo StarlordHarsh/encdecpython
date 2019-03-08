@@ -13,29 +13,25 @@ class color:
     # End colored text
     END = '\033[0m'
 
-
 import re
 import progressbar
 import sys
 import time
 from tqdm import tqdm
 
-
 def bashenc():
- s = input("Enter the message to Encrypt:")
- s1 = ""
- for k in s:
-  s1 += (chr(90 - (ord(k) - 65))) if k.isupper() else chr(122 - (ord(k) - 97))
- print("Encrypted message is:",s1)
-
+    s = input("Enter the message to Encrypt:")
+    s1 = ""
+    for k in s:
+        s1 += (chr(90 - (ord(k) - 65))) if k.isupper() else chr(122 - (ord(k) - 97))
+    print("Encrypted message is:", s1)
 
 def bashdec():
- s = input("Enter the message to Decrypt:")
- s1 = ""
- for k in s:
-  s1 += (chr(90 - (ord(k) - 65))) if k.isupper() else chr(122 - (ord(k) - 97))
- print("Decrypted message is:",s1)
-
+    s = input("Enter the message to Decrypt:")
+    s1 = ""
+    for k in s:
+        s1 += (chr(90 - (ord(k) - 65))) if k.isupper() else chr(122 - (ord(k) - 97))
+    print("Decrypted message is:", s1)
 
 def rotenc():
     s = ""
@@ -60,7 +56,6 @@ def rotenc():
                 print(chr(j), end="")
                 li = li - 1
 
-
 def rotdec():
     s = ""
     s = input("Enter the encrypted string to decrypt it:")
@@ -81,7 +76,6 @@ def rotdec():
             elif j == 32:
                 print(chr(j), end="")
                 li = li - 1
-
 
 def rot22enc():
     s = ""
@@ -127,7 +121,6 @@ def rot22enc():
                 print(chr(j), end="")
                 li = li - 1
 
-
 def rot22dec():
     s = ""
     s = input("Enter the encrypted string to decrypt it:")
@@ -150,7 +143,6 @@ def rot22dec():
                 print(chr(j), end="")
                 li = li - 1
 
-
 def simenc():
     s = ""
     s = input("Enter the string to encrypt here:")
@@ -163,7 +155,6 @@ def simenc():
         print(chr(k), end="")
         li = li - 1
 
-
 def simdec():
     s = ""
     s = input("Enter the encrypted string here to decrypt it:")
@@ -175,7 +166,6 @@ def simdec():
         k = k - 1
         print(chr(k), end="")
         li = li - 1
-
 
 def cenc():
     s = "abcdefghijklmnopqrstuvwxyz"
@@ -206,7 +196,6 @@ def cenc():
                 print(' ', end="")
                 li = li - 1
 
-
 def cdec():
     h = ""
     c = ''
@@ -229,19 +218,16 @@ def cdec():
         elif j == ' ':
             print(' ', end="")
 
-
 def delay_print(s):
     for c in s:
         print(c, end="")
         sys.stdout.flush()
         time.sleep(0.1)
 
-
 def bar():
     progress = progressbar.ProgressBar()
     for __ in progress(range(25)):
         time.sleep(0.1)
-
 
 print("This Script Can Encrypt Ur Message In a Different Manner So That No Third Person Can Read It!")
 print("\n\n\n")
@@ -252,6 +238,13 @@ print("\n\n\n")
   sys.exit(0)'''
 bar()
 
+def prnt():
+    print("""            
+              1. Encrypt the text
+              2. Decrypt the text
+              3. Exit from this method
+                                          """)
+
 while True:
     print("""
               1. Atbash Encryption
@@ -259,21 +252,15 @@ while True:
               3. Rot22
               4. Simple Encryption(add 1)
               5. caesar(with ur key) where ! denotes a single space 
-              6. Exit The program 
+              0. Exit The program 
                                               """)
     c = int(input("Your Choice-"))
-    if c == 6:
+    if c == 0:
         delay_print(color.WARNING + "Thanks for using me!" + color.END)
         delay_print(color.FAIL + "Leave a Reply on cyberbot1502@gmail.com" + color.END)
         sys.exit(0)
 
     if c == 1:
-        def prnt():
-            print("""            
-              1. Encrypt the text
-              2. Decrypt the text
-              3. Exit from this method
-                                                  """)
 
         while True:
             prnt()
@@ -284,88 +271,62 @@ while True:
                 bashdec()
             elif f == 3:
                 break
-            #ch = int(input("\nWant to do some more encryption-decryption task on Atbash then enter 2:"))
+            # ch = int(input("\nWant to do some more encryption-decryption task on Atbash then enter 2:"))
             '''if ch!=0:
-    prnt()'''
+prnt()
 
-
-    elif c == 2:
-        def pr():
+  elif c == 2:
+        def prnt():
             print("""            
               1. Encrypt the text
               2. Decrypt the text
               3. Exit from this method
-                                               """)
+                                               """)'''
 
-
-        hc = None
-        while hc != 0:
-            pr()
+        while True:
+            prnt()
             f = int(input("Enter your choice-"))
             if f == 1:
-             rotenc()
+                rotenc()
             elif f == 2:
-             rotdec()
+                rotdec()
             elif f == 3:
-             break
+                break
 
     elif c == 3:
-        def p():
-            print("""            
-              1. Encrypt the text
-              2. Decrypt the text
-              3. Exit from this method
-
-                                    """)
-
 
         cc = None
         while cc != 0:
-            p()
+            prnt()
             f = int(input("Enter your choice-"))
             if f == 1:
-             rot22enc()
+                rot22enc()
             elif f == 2:
-             rot22dec()
+                rot22dec()
             elif f == 3:
-             break
+                break
 
     elif c == 4:
-        def t():
-            print("""            
-                  1. Encrypt the text
-                  2. Decrypt the text
-                  3. Exit from this method
 
-                                        """)
-
-        g = None
-        while g != 0:
-            t()
+        while True:
+            prnt()
             f = int(input("Enter your choice-"))
             if f == 1:
-             simenc()
+                simenc()
             elif f == 2:
-             simdec()
+                simdec()
             elif f == 3:
-             break
+                break
 
     elif c == 5:
-        def f1():
-            print("""            
-                  1. Encrypt the text
-                  2. Decrypt the text
-                  3. Exit from this method
-                                                """)
 
-        i = None
-        while i != 0:
-            f1()
+        while True:
+            prnt()
             f = int(input("Enter your choice-"))
             if f == 1:
-             cenc()
+                cenc()
             elif f == 2:
-             cdec()
+                cdec()
             elif f == 3:
-             break
+                break
 
