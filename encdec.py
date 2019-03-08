@@ -26,7 +26,7 @@ def bashenc():
  s1 = ""
  for k in s:
   s1 += (chr(90 - (ord(k) - 65))) if k.isupper() else chr(122 - (ord(k) - 97))
- print(s1)
+ print("Encrypted message is:",s1)
 
 
 def bashdec():
@@ -34,7 +34,7 @@ def bashdec():
  s1 = ""
  for k in s:
   s1 += (chr(90 - (ord(k) - 65))) if k.isupper() else chr(122 - (ord(k) - 97))
- print(s1)
+ print("Decrypted message is:",s1)
 
 
 def rotenc():
@@ -275,20 +275,19 @@ while True:
               3. Exit from this method
                                                   """)
 
-
-        ch = None
-        while ch != 0:
+        while True:
             prnt()
-            f = int(input("Enter ur choice what to do now:"))
+            f = int(input("Enter your choice-"))
             if f == 1:
                 bashenc()
-            if f == 2:
+            elif f == 2:
                 bashdec()
-            ch = int(input("\nWant to do some more encryption-decryption task on Atbash then enter 2:"))
+            elif f == 3:
+                break
+            #ch = int(input("\nWant to do some more encryption-decryption task on Atbash then enter 2:"))
             '''if ch!=0:
     prnt()'''
-            if ch == 3:
-                sys.exit(0)
+
 
     elif c == 2:
         def pr():
@@ -310,7 +309,7 @@ while True:
             hc = int(input("\nTo do some more task in ROT13 enter 4 otherwise 0:"))
             print("\n")
             '''if hc!=0:
-    pr()'''
+  pr()'''
             if hc == 3:
                 sys.exit(0)
 
@@ -339,7 +338,6 @@ while True:
             if cc == 3:
                 sys.exit(0)
 
-
     elif c == 4:
         def t():
             print("""            
@@ -348,7 +346,6 @@ while True:
                   3. Exit from this method
 
                                         """)
-
 
         g = None
         while g != 0:
@@ -360,10 +357,9 @@ while True:
                 simdec()
             g = int(input("\nTo do more task in Simple method enter 5 otherwise 0:"))
             '''if g!=0:
-    f()'''
+            f()'''
             if g == 3:
                 sys.exit(0)
-
 
     elif c == 5:
         def f():
@@ -371,9 +367,7 @@ while True:
                   1. Encrypt the text
                   2. Decrypt the text
                   3. Exit from this method
-
-                                        """)
-
+                                                """)
 
         i = None
         while i != 0:
